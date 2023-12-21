@@ -2,7 +2,7 @@
   <div v-if="book.rate !== 0" class="container">
     <div class="container__book">
       <div class="container__img">
-        <img :src=book.imageUrl>
+        <img :src=book.imageUrl :alt="book.title">
       </div>
       <div class="container__content">
         <h2>{{book.title}}</h2>

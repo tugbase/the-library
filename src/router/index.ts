@@ -44,6 +44,7 @@ const index = createRouter({
     },
     {path: '/:notFound(.*)*', component: NotFound}
   ],
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   scrollBehavior(to, from, savedPosition) {
     return { top: 0, behavior: 'smooth' }
   }

@@ -11,7 +11,7 @@
 <script>
 import TheHeader from "@/views/TheHeader.vue";
 import {userAuthStore} from "@/stores/auth";
-import { useRouter } from "vue-router";
+
 
 
 export default {

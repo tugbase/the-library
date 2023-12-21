@@ -22,9 +22,9 @@
         <li v-else>
           <router-link to='/auth'>Login / Signup</router-link>
         </li>
-        <div v-if='auth.isAuthenticated'>
+        <li v-if='auth.isAuthenticated'>
           <button-template class="logout" @click='logOut'>Logout</button-template>
-        </div>
+        </li>
       </ul>
 
     </nav>

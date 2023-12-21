@@ -138,11 +138,7 @@ export default {
       warning.value = ''
     }
     function checkValidity(input) {
-      if(input.val === '' || input.val === 0 || input.val === null) {
-        input.isValid = false;
-      } else {
-        input.isValid = true;
-      }
+      input.isValid = !(input.val === '' || input.val === 0 || input.val === null);
 
     }
 

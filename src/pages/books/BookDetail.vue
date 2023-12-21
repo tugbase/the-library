@@ -8,7 +8,7 @@
   <div class="detail-block" v-if="store.selectedBook(id)">
     <div class="detail-block__top">
     <div class="detail-block__top__image">
-      <img :src="store.selectedBook(id)!.imageUrl">
+      <img :src="store.selectedBook(id)!.imageUrl" :alt="store.selectedBook(id)!.title">
     </div>
     <div class="detail-block__top__text">
       <div class="detail-block__top__text__title">
@@ -59,10 +59,9 @@ import LoadSpinner from "@/views/LoadSpinner.vue";
 export default {
   components: { LoadSpinner, AddReview, ButtonTemplate, EditBook},
   props: ['id'],
-  setup(props, _) {
+  setup(props) {
     const store = bookStore();
     const isLoading = ref(false);
-    const error = ref('');
     const router = useRouter();
     onMounted(async() => {
       const success = await store.loadBooks();

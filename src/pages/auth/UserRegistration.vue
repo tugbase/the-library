@@ -24,13 +24,12 @@ import ButtonTemplate from "@/views/ButtonTemplate.vue";
 import {userAuthStore} from "@/stores/auth";
 import {useRouter } from "vue-router";
 import LoadSpinner from "@/views/LoadSpinner.vue";
-import AlertWindow from "@/components/AlertWindow.vue";
+
 
 const userEmail = ref('');
 const password = ref('');
 const formIsValid = ref(true);
 const mode = ref('login');
-const error = ref(null);
 const isLoading = ref(false);
 const auth = userAuthStore();
 const router = useRouter();

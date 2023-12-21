@@ -75,6 +75,7 @@ export default {
 
       sorting.value = {mode: mode, prop: property};
     }
+    // eslint-disable-next-line @typescript-eslint/no-unused-vars
     watch(searchTerm, function(newValue, oldValue){
       setTimeout(() => {
         if (newValue === searchTerm.value) {

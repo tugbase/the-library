@@ -78,7 +78,7 @@ export const bookStore = defineStore('book', {
 
            const bookSent: Book = {...book, userId : this.userId};
            try{
-             const response =  await fetch(`https://the-library-2-default-rtdb.europe-west1.firebasedatabase.app/books.json?auth=` + this.token, {
+              await fetch(`https://the-library-2-default-rtdb.europe-west1.firebasedatabase.app/books.json?auth=` + this.token, {
                method: 'POST',
                body: JSON.stringify(bookSent)
              });
@@ -136,7 +136,7 @@ export const bookStore = defineStore('book', {
                method: 'PATCH',
                body: JSON.stringify(editedBook)
              });
-             const updatedBook = await updateRequest.json();
+            await updateRequest.json();
              useToast().success('The book has been successfully updated!', {
                timeout: 2000
              });
@@ -153,7 +153,7 @@ export const bookStore = defineStore('book', {
         async deleteBook(data:Book): Promise<boolean> {
            const id = data.id;
           try {
-            const deleteRequest = await fetch(`https://the-library-2-default-rtdb.europe-west1.firebasedatabase.app/books/${id}.json?auth=`+this.token, {
+            await fetch(`https://the-library-2-default-rtdb.europe-west1.firebasedatabase.app/books/${id}.json?auth=`+this.token, {
               method: 'DELETE',
               body: JSON.stringify(data)
             });
