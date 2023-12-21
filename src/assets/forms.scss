@@ -1,0 +1,136 @@
+@import "global";
+form {
+  margin: 3rem;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  background-color: $white-rock;
+  align-items: center;
+  border-radius: 20px;
+
+}
+.form-control {
+  margin: 1rem;
+  width: 75%;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  @media only screen and (max-width: $bp-md) {
+    width: 100%;
+  }
+
+}
+
+.author-page {
+  display: flex;
+  justify-content: space-between;
+  width: 75%;
+  gap: 2rem;
+}
+.author {
+  margin-right: auto;
+  width: 100%;
+}
+.page {
+  width: 30%;
+  input {
+    padding: 0.75rem;
+  }
+}
+
+label {
+  font-weight: bold;
+  color: $color-grey-dark;
+  margin-bottom: 0.5rem;
+}
+
+input[type='checkbox'] + label {
+  margin: 0 0 0 2rem;
+}
+
+input,
+textarea {
+  font-size: 1rem;
+  font-family: $font-display;
+  width: 100%;
+  border: none;
+  border-radius: 5px;
+  color: $color-grey-dark;
+  padding: 0.75rem;
+  transition: all 0.2s;
+}
+
+input:focus,
+textarea:focus {
+  box-shadow: 0 1rem 2rem rgba(0,0,0,0.1);
+  outline: none;
+  border-bottom: 3px solid $cadmium-green;
+
+}
+
+
+
+input[type='checkbox'] {
+  display: inline;
+  width: auto;
+  border: none;
+}
+
+input[type='checkbox']:checked {
+  outline: #3d008d solid 1px;
+  outline-offset: 2px;
+  accent-color: #ff7730;
+}
+#classic,
+#isRead{
+  transform: scale(2);
+}
+.checkbox-area {
+  margin: 0.5rem 1rem;
+
+}
+
+h3 {
+  margin: 0.5rem 0;
+  font-size: 1rem;
+}
+
+.invalid label {
+  color: red;
+}
+
+.invalid input,
+.invalid textarea {
+  border: 1px solid red;
+}
+.submit {
+  align-self: end;
+  margin-right: 15%;
+  @media only screen and (max-width: $bp-lg){
+    margin-right: 10%;
+  }
+
+}
+.rate-drowpdown {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+
+  label {
+    margin-bottom: unset;
+  }
+}
+select {
+  padding: 0.3rem 1rem;
+  background-color: $color-grey-light-1;
+  border: 1px solid $color-grey-dark-2;
+  border-radius: 50px;
+  font-size: 1rem;
+  text-align: center;
+  color: $color-grey-dark;
+  font-family: $font-display;
+  outline-color: $cadmium-green;
+}
+option {
+  outline-color: purple;
+}
